@@ -48,13 +48,7 @@ Use this when you want to see a project run end to end before committing to it.
 
 1. **Fork this repo** and confirm Actions are allowed under **Settings → Actions → General**.
 2. **Stop ignoring the root `.github/` directory.** In [`.gitignore`](.gitignore), comment out the `/.github/` line. It is ignored by default so that enabling a project is always an explicit choice.
-3. **Copy the project's `.github/` directory to the repository root.** For the Port CLI promotion pipeline:
-
-   ```bash
-   cp -R reference-architecture/port-resource-promotion/port-cli/.github .github
-   ```
-
-   Copy real files — GitHub does not follow symlinks when it looks for workflows. To enable more projects later, copy their `.github/` contents into the same root tree; workflow and action names are project-scoped, so they merge rather than collide.
+3. **The Port CLI promotion pipeline is already in the repository root's `.github/` directory.** Copy real files — GitHub does not follow symlinks when it looks for workflows. To enable more projects later, copy their `.github/` contents into the same root tree; workflow and action names are project-scoped, so they merge rather than collide.
 4. **Follow that project's README** for its GitHub Environments, secrets, variables, and any data it needs (a config export, tfvars, and so on).
 5. **Commit and push.** Runners only see what is committed, so the root `.github/` directory must land in your fork before the pipeline can run.
 

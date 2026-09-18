@@ -139,8 +139,8 @@ jobs:
 
   # compare-pr runs untrusted PR code (the checked-out PR ref controls this
   # workflow, the composite actions, and port-config-port-cli/**). It therefore holds NO
-  # credentials and never references an environment/secret: there is nothing for a
-  # fork or a same-repo branch PR to exfiltrate. It diffs the PR's committed config
+  # credentials and never references an environment/secret: there is nothing for
+  # a fork or a same-repo branch PR to exfiltrate. It diffs the PR's committed config
   # against the same file on the base branch — a pure git/file compare, no live org.
   compare-pr:
     name: "Compare config → base (PR preview)"

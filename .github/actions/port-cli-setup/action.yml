@@ -19,7 +19,7 @@ runs:
       run: |
         set -euo pipefail
         missing=()
-        [ -z "${PORT_CLIENT_ID:-}"      ] && missing+=(PORT_CLIENT_ID)
+        [ -z "${PORT_CLIENT_ID:-}" ]      && missing+=(PORT_CLIENT_ID)
         [ -z "${PORT_CLIENT_SECRET:-}"  ] && missing+=(PORT_CLIENT_SECRET)
         [ -z "${PORT_API_URL:-}"        ] && missing+=(PORT_API_URL)
         if [ ${#missing[@]} -ne 0 ]; then
