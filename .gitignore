@@ -51,4 +51,4 @@ tfplan
 
 ## GitHub Actions
 # Disable if testing code directly from this repo
-/.github/
+# /.github/
